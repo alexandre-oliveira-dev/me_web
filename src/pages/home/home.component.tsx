@@ -1,5 +1,7 @@
 import Header from "../../components/header/header";
 import "./styles.css";
+import me from "../../assets/me.png";
+
 export default function Home() {
   return (
     <>
@@ -17,7 +19,11 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="box"></div>
+          <div className="box">
+            <div className="box-image">
+              <img className="me-img" src={me} alt="alexnadre developer image" />
+            </div>
+          </div>
         </section>
       </div>
     </>
