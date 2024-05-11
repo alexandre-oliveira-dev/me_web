@@ -68,7 +68,6 @@
 
 
 .box-image {
-    box-shadow: 10px 10px 5px 5px black;
     width: 500px;
     height: 500px;
     border-radius: 50%;
@@ -86,6 +85,8 @@
 
 .box-image:hover {
     background-color: #8873F0;
+    scale: 1.1;
+    box-shadow: 10px 10px 5px 5px black;
 }
 
 
@@ -112,14 +113,17 @@
 
 .section-2 {
     width: 100%;
-    min-height: 400px;
+    height: auto;
     background-color: #121212;
+    padding: 5rem;
 }
 
 
 .box-skills {
     width: 100%;
     display: flex;
+    min-height: 200px;
+    height: auto;
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
@@ -132,33 +136,19 @@
 }
 
 .box-skills img {
-    width: auto;
     scale: 2;
+}
+
+.imgskill.skillsHover {
+    transform: translateY(-15px);
+    transition: 0.3s ease;
+    z-index: 1;
+    scale: 2.3;
 }
 
 @keyframes spin {
 
     to {
         transform: rotate(360deg)
-    }
-}
-
-
-
-
-@keyframes blur {
-    0% {
-        filter: blur(50px);
-
-    }
-
-    50% {
-        filter: blur(30px);
-
-    }
-
-    100% {
-        filter: blur(50px);
-
     }
 }
