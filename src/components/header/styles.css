@@ -4,6 +4,15 @@
     display: flex;
     align-items: center;
     position: fixed;
+    transition: 0.3s ease
+}
+
+.header-component.header-fixed {
+    opacity: 0.8;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.521);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .logo {
@@ -60,4 +69,8 @@
     place-content: center;
     font-size: 20px;
     border: 0;
+    transition: 0.3s ease;
+}
+.contactmebutton:hover{
+    background-color: #4f3fa1;
 }

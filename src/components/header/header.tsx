@@ -1,5 +1,18 @@
 import "./styles.css";
 export default function Header() {
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition !== 0) {
+      document
+        .querySelector(".header-component")
+        ?.classList.add("header-fixed");
+    } else {
+      document
+        .querySelector(".header-component")
+        ?.classList.remove("header-fixed");
+    }
+  });
+
   return (
     <header className="header-component">
       <div className="logo">
@@ -7,8 +20,7 @@ export default function Header() {
       </div>
       <div className="buttons-list">
         <a href="">Inicio</a>
-        <a href="">Serviços</a>
-        <a href="">Contate-me</a>
+        <a href="">Projejtos</a>
       </div>
       <div className="contact-me">
         <button className="contactmebutton">Contatos</button>
