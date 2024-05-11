@@ -1,15 +1,9 @@
 import Header from "../../components/header/header";
 import "./styles.css";
 import {FaLinkedin, FaGithub, FaFileDownload} from "react-icons/fa";
-import downloadImag from "../../assets/textCircle .png";
+import CircleText from "../../components/circleText";
 
 export default function Home() {
-  /*   let deg = 0;
-  for (let i = 1; i <= 10; i++) {
-    const div = document.getElementById("text-circle p:nth-child(" + i + ")");
-    if (div) div.style.transform = `rodate(${90}deg)`;
-    deg = deg + 6;
-  } */
   return (
     <>
       <div className="container-home">
@@ -29,6 +23,7 @@ export default function Home() {
           <div className="box">
             <div className="box-image">
               <button
+                id="animationSvg"
                 style={{
                   border: 0,
                   backgroundColor: "transparent",
@@ -44,8 +39,7 @@ export default function Home() {
                   donwload.click();
                 }}
               >
-                <img id="text-circle" src={downloadImag} alt="" />
-
+                <CircleText></CircleText>
                 <div className="dowload-cv"></div>
                 <div
                   style={{
@@ -79,7 +73,93 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section-2"></section>
+        <section className="section-2">
+          <div
+            style={{
+              width: "100%",
+              height: "auto",
+              padding: "40px 0 0 0",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <h1 style={{color: "#fff", fontSize: 50}}>Minhas Skills</h1>
+          </div>
+          <div className="box-skills">
+            <h2>Back-end</h2>
+            <br />
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-around",
+                flexWrap: "wrap",
+              }}
+            >
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=nodejs"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=express"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=prisma"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=graphql"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=nest"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=postgres"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=mysql"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=mongodb"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=firebase"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=docker"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=azure"
+                alt="skills"
+              />
+              <img
+                style={{width: "70px"}}
+                src="https://skillicons.dev/icons?i=aws"
+                alt="skills"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
