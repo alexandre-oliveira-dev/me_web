@@ -1,0 +1,20 @@
+.initialComponent {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    position: fixed;
+    z-index: 1000;
+    opacity: 0.8;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 50px;
+    transition: all 3s ease;
+    opacity: 1;
+}
+
+.initialComponent.show {
+    opacity: 0;
+}
