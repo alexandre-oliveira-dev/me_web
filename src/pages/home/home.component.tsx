@@ -39,7 +39,7 @@ export default function Home() {
                 }}
                 onClick={() => {
                   const donwload = document.createElement("a");
-                  donwload.href = "src/assets/cv - alexandre.pdf";
+                  donwload.href = "src/assets/cvalexandre.pdf";
                   donwload.download = "Cv_Alexandre.pdf";
                   donwload.click();
                 }}
