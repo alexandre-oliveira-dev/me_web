@@ -43,8 +43,7 @@ export default function Home() {
                 }}
                 onClick={() => {
                   const donwload = document.createElement("a");
-                  donwload.href =
-                    "https://drive.google.com/file/d/1QxAFUcw-BMKwiL6gfq1KjEMLxQLEw1RD/view";
+                  donwload.href = "/Cv_Alexandre.pdf";
                   donwload.download = "Cv_Alexandre.pdf";
                   donwload.click();
                 }}
