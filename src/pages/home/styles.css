@@ -140,11 +140,26 @@
     scale: 2;
 }
 
-.imgskill.skillsHover {
+.imgskill:hover {
     transform: translateY(-15px);
     transition: 0.3s ease;
     z-index: 1;
     scale: 2.3;
+}
+
+.imgskill:hover>.imgskill:not(:hover) {
+    transform: translateY(0px);
+}
+
+.imgskillFrontend:hover {
+    transform: translateY(-15px);
+    transition: 0.3s ease;
+    z-index: 1;
+    scale: 2.3;
+}
+
+.imgskillFrontend:hover>.imgskillFrontend:not(:hover) {
+    transform: translateY(0px);
 }
 
 @keyframes spin {

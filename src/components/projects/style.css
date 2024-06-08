@@ -1,0 +1,19 @@
+.iframe {
+    height: max-content;
+    border: 0;
+    margin-top: 3rem;
+    flex: 1;
+    pointer-events: none;
+}
+
+.titleProject {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.subtitleProject {
+    text-align: center;
+    color: silver;
+    font-size: 20px;
+}
