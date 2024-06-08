@@ -152,7 +152,7 @@ export default function Home() {
           >
             <h1 style={{color: "#fff", fontSize: 50}}>Projétos</h1>
           </div>
-          <ProjectsComponent></ProjectsComponent>
+          <ProjectsComponent className="skils-container"></ProjectsComponent>
         </section>
       </div>
     </>

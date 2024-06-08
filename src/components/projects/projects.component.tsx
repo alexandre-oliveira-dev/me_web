@@ -1,9 +1,10 @@
-import {useHistory} from "react-router-dom";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
 import "./style.css";
 
-export default function ProjectsComponent() {
-  const {push} = useHistory();
+type ReactProps = React.PropsWithoutRef<React.AllHTMLAttributes<any>>;
 
+export default function ProjectsComponent({...props}: ReactProps) {
   const projects = [
     {
       key: 1,
@@ -31,7 +32,7 @@ export default function ProjectsComponent() {
   ];
 
   return (
-    <div style={{display: "flex", flexWrap: "wrap", width: "100%"}}>
+    <div {...props} style={{display: "flex", flexWrap: "wrap", width: "100%"}}>
       {projects.map(item => {
         return (
           <div
@@ -44,7 +45,7 @@ export default function ProjectsComponent() {
               width: item?.width,
               cursor: "pointer",
             }}
-            onClick={() => push(item?.src)}
+            onClick={() => (window.location.href = item?.src)}
           >
             <h2 className="titleProject">{item.title}</h2>
             <p className="subtitleProject">{item.subtitle}</p>
