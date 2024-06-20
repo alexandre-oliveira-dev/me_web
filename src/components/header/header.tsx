@@ -13,17 +13,31 @@ export default function Header() {
     }
   });
 
+  const Box = () => {
+    return <div className="box-contact"></div>;
+  };
+
   return (
     <header className="header-component">
       <div className="logo">
         <h1>{"</>"}</h1>
       </div>
       <div className="buttons-list">
-        <a href="">Inicio</a>
-        <a href="">Projejtos</a>
+        <button>Inicio</button>
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 1600,
+              behavior: "smooth",
+            });
+          }}
+        >
+          Projejtos
+        </button>
       </div>
       <div className="contact-me">
         <button className="contactmebutton">Contatos</button>
+        <Box></Box>
       </div>
     </header>
   );
