@@ -112,6 +112,7 @@
 
 .section-2 {
     width: 100%;
+    height: auto;
     background-color: #121212;
     padding: 5rem;
 }

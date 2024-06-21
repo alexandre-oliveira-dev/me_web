@@ -147,12 +147,22 @@ export default function Home() {
             style={{
               width: "100%",
               display: "flex",
+              height: "100px",
               justifyContent: "center",
             }}
           >
             <h1 style={{color: "#fff", fontSize: 50}}>Projétos</h1>
           </div>
-          <ProjectsComponent className="skils-container"></ProjectsComponent>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ProjectsComponent className="skils-container"></ProjectsComponent>
+          </div>
         </section>
       </div>
     </>
