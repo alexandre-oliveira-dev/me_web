@@ -23,7 +23,16 @@ export default function Header() {
         <h1>{"</>"}</h1>
       </div>
       <div className="buttons-list">
-        <button>Inicio</button>
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          Inicio
+        </button>
         <button
           onClick={() => {
             window.scrollTo({

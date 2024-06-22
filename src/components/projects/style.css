@@ -1,5 +1,5 @@
 .iframe {
-    margin-top: 3rem;
+    margin-top: 1rem;
     pointer-events: none;
     object-fit: cover;
 }
@@ -8,6 +8,7 @@
     text-align: center;
     color: #fff;
     font-size: 40px;
+
 }
 
 .subtitleProject {
@@ -36,8 +37,14 @@
 
 .container-carrossel {
     display: flex;
-    width: 1100px;
-    height: 600px;
+    width: 85%;
+    height: auto;
     align-items: center;
     gap: 2rem;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
 }

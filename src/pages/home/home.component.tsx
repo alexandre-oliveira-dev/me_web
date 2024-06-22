@@ -151,7 +151,7 @@ export default function Home() {
               justifyContent: "center",
             }}
           >
-            <h1 style={{color: "#fff", fontSize: 50}}>Projétos</h1>
+            <h1 style={{color: "#fff", fontSize: 50}}>Projetos</h1>
           </div>
           <div
             style={{

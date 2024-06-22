@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+import React, {useState} from "react";
 import "./style.css";
 import dash from "./imgs/dash.png";
 import barber from "./imgs/barber.png";
@@ -9,6 +9,8 @@ import {FaGithub} from "react-icons/fa";
 type ReactProps = React.PropsWithoutRef<React.AllHTMLAttributes<any>>;
 
 export default function ProjectsComponent({...props}: ReactProps) {
+  const [current, setCurrent] = useState(0);
+
   const projects = [
     {
       key: 1,
@@ -47,10 +49,41 @@ export default function ProjectsComponent({...props}: ReactProps) {
     },
   ];
 
+  function handleCarrosel(key: string) {
+    const element = document.querySelector(".iframe");
+    if (key === "right") {
+      if (current < projects.length - 1) {
+        element?.setAttribute(
+          "style",
+          "transform: translateX(-100%); transition: 0.7s ease;"
+        );
+        setTimeout(() => {
+          setCurrent(current + 1);
+        }, 500);
+      }
+      return;
+    }
+    if (key === "left") {
+      if (current !== 0) {
+        element?.setAttribute(
+          "style",
+          "transform: translateX(100%); transition: 0.7s ease;"
+        );
+        setTimeout(() => {
+          return setCurrent(current - 1);
+        }, 500);
+      }
+      return;
+    }
+  }
+
   return (
     <div className="container-carrossel">
-      <button className="btn-arrow-left">{"<"}</button>
+      <button onClick={() => handleCarrosel("left")} className="btn-arrow-left">
+        {"<"}
+      </button>
       <div
+        className="scroll"
         {...props}
         style={{
           display: "flex",
@@ -58,38 +91,42 @@ export default function ProjectsComponent({...props}: ReactProps) {
           gap: 20,
         }}
       >
-        {projects.map(item => {
-          return (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "end",
-                marginTop: "4rem",
-                cursor: "pointer",
-                width: "100%",
-              }}
-            >
-              <h2 className="titleProject">{item.title}</h2>
-              <p className="subtitleProject">{item.subtitle}</p>
-              <div
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  marginTop: "1rem",
-                }}
-              >
-                <a target="_blank" href={item.github}>
-                  <FaGithub size={50} color="#8A7BF1"></FaGithub>
-                </a>
-              </div>
-              <img key={item.key} src={item.src} className="iframe"></img>
-            </div>
-          );
-        })}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "end",
+            cursor: "pointer",
+            width: "100%",
+          }}
+        >
+          <h2 className="titleProject">{projects[current].title}</h2>
+          <p className="subtitleProject">{projects[current].subtitle}</p>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "1rem",
+            }}
+          >
+            <a target="_blank" href={projects[current].github}>
+              <FaGithub size={50} color="#8A7BF1"></FaGithub>
+            </a>
+          </div>
+          <img
+            key={projects[current].key}
+            src={projects[current].src}
+            className="iframe"
+          ></img>
+        </div>
       </div>
-      <button className="btn-arrow-right">{">"}</button>
+      <button
+        onClick={() => handleCarrosel("right")}
+        className="btn-arrow-right"
+      >
+        {">"}
+      </button>
     </div>
   );
 }
