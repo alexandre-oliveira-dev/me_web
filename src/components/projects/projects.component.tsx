@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {useState} from "react";
 import "./style.css";
@@ -10,6 +11,7 @@ type ReactProps = React.PropsWithoutRef<React.AllHTMLAttributes<any>>;
 
 export default function ProjectsComponent({...props}: ReactProps) {
   const [current, setCurrent] = useState(0);
+  console.log("🚀 ~ ProjectsComponent ~ current:", current);
 
   const projects = [
     {
@@ -50,30 +52,29 @@ export default function ProjectsComponent({...props}: ReactProps) {
   ];
 
   function handleCarrosel(key: string) {
-    const element = document.querySelector(".iframe");
-    if (key === "right") {
-      if (current < projects.length - 1) {
-        element?.setAttribute(
-          "style",
-          "transform: translateX(-100%); transition: 0.7s ease;"
-        );
-        setTimeout(() => {
-          setCurrent(current + 1);
-        }, 500);
-      }
-      return;
+    const element = document.querySelector("#scroll");
+    const scrollWidthBySlide = (element?.scrollWidth || 1) / projects.length;
+
+    if (key === "right" && element) {
+      if (current >= projects.length -1) return;
+      const n = current === 0 ? current + 1 : current + 1;
+      setCurrent(n);
+
+      element.scrollTo({
+        left: scrollWidthBySlide * n,
+        behavior: "smooth",
+      });
     }
-    if (key === "left") {
-      if (current !== 0) {
-        element?.setAttribute(
-          "style",
-          "transform: translateX(100%); transition: 0.7s ease;"
-        );
-        setTimeout(() => {
-          return setCurrent(current - 1);
-        }, 500);
-      }
-      return;
+    if (key === "left" && element) {
+      if (current === 0) return;
+
+      const n = current === projects.length ? current - 2 : current - 1;
+      setCurrent(n);
+
+      element.scrollTo({
+        left: scrollWidthBySlide * n,
+        behavior: "smooth",
+      });
     }
   }
 
@@ -83,43 +84,44 @@ export default function ProjectsComponent({...props}: ReactProps) {
         {"<"}
       </button>
       <div
-        className="scroll"
         {...props}
+        id="scroll"
         style={{
           display: "flex",
           overflowX: "auto",
           gap: 20,
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "end",
-            cursor: "pointer",
-            width: "100%",
-          }}
-        >
-          <h2 className="titleProject">{projects[current].title}</h2>
-          <p className="subtitleProject">{projects[current].subtitle}</p>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "1rem",
-            }}
-          >
-            <a target="_blank" href={projects[current].github}>
-              <FaGithub size={50} color="#8A7BF1"></FaGithub>
-            </a>
-          </div>
-          <img
-            key={projects[current].key}
-            src={projects[current].src}
-            className="iframe"
-          ></img>
-        </div>
+        {projects.map(item => {
+          return (
+            <div
+              className="scroll"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "end",
+                cursor: "pointer",
+                width: "100%",
+              }}
+            >
+              <h2 className="titleProject">{item.title}</h2>
+              <p className="subtitleProject">{item.subtitle}</p>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "1rem",
+                }}
+              >
+                <a target="_blank" href={item.github}>
+                  <FaGithub size={50} color="#8A7BF1"></FaGithub>
+                </a>
+              </div>
+              <img key={item.key} src={item.src} className="iframe"></img>
+            </div>
+          );
+        })}
       </div>
       <button
         onClick={() => handleCarrosel("right")}

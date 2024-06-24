@@ -1,8 +1,9 @@
 .iframe {
     margin-top: 1rem;
-    pointer-events: none;
     object-fit: cover;
 }
+
+
 
 .titleProject {
     text-align: center;
@@ -37,7 +38,7 @@
 
 .container-carrossel {
     display: flex;
-    width: 85%;
+    width: 65%;
     height: auto;
     align-items: center;
     gap: 2rem;
