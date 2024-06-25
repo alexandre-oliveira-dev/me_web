@@ -147,7 +147,7 @@ export default function Home() {
             style={{
               width: "100%",
               display: "flex",
-              height: "100px",
+              height: "80px",
               justifyContent: "center",
             }}
           >
