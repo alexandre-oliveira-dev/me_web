@@ -189,6 +189,9 @@
     .box-image {
         width: 270px;
         height: 270px;
+        background-color: #8873F0;
+        scale: 0.9;
+        box-shadow: 10px 10px 5px 5px black;
     }
 
     .box:last-child {
