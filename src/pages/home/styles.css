@@ -166,3 +166,64 @@
         transform: rotate(360deg)
     }
 }
+
+@media(max-width:500px) {
+    .section-home {
+        gap: 1rem;
+        padding: 10px 10px 0px 10px;
+    }
+
+    .box h1 {
+        font-size: 50px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    .box-image {
+        width: 270px;
+        height: 270px;
+    }
+
+    .box:last-child {
+        display: grid;
+        margin-top: 0px !important;
+    }
+
+    .box-text-me {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #animationSvg {
+        scale: 0.8;
+    }
+
+    .social-icons {
+        display: flex !important;
+        gap: 10px;
+        margin-top: 2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .box-skills>div>img {
+        width: 40px !important;
+    }
+
+    .section-2 {
+        padding: 2rem 0px 2rem 0px;
+
+    }
+
+    .section-2>div>h1 {
+        font-size: 35px !important;
+    }
+
+}

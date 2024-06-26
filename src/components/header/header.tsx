@@ -13,10 +13,6 @@ export default function Header() {
     }
   });
 
-  const Box = () => {
-    return <div className="box-contact"></div>;
-  };
-
   return (
     <header className="header-component">
       <div className="logo">
@@ -43,10 +39,6 @@ export default function Header() {
         >
           Projejtos
         </button>
-      </div>
-      <div className="contact-me">
-        <button className="contactmebutton">Contatos</button>
-        <Box></Box>
       </div>
     </header>
   );

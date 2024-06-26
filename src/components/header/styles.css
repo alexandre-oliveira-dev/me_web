@@ -24,15 +24,12 @@
 }
 
 .logo h1 {
-    color: #fff;
-    font-size: 40px;
+    color: #8873F0;
+    font-size: 60px;
     letter-spacing: 2px;
 }
 
-.logo h1:last-child {
-    color: #8873F0;
-    font-size: 60px;
-}
+
 
 .buttons-list {
     flex: 1;
@@ -91,4 +88,14 @@
 
 .contactmebutton:hover>.box-contact {
     display: flex;
+}
+
+
+@media(max-width:500px) {
+    .logo h1 {
+        font-size: 40px;
+    }
+    .header-component{
+        height: 70px;
+    }
 }

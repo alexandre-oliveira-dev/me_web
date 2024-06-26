@@ -1,6 +1,6 @@
 .container-carrossel {
     display: flex;
-    width: 75%;
+    width: 70%;
     height: auto;
     align-items: center;
     gap: 2rem;
@@ -76,4 +76,22 @@
     width: 0;
     height: 0;
     background-color: transparent;
+}
+
+
+@media(max-width:500px) {
+    .container-carrossel {
+        width: 100%;
+
+    }
+
+    .titleProject {
+        font-size: 30px;
+    }
+
+    .subtitleProject {
+        font-size: 15px;
+    }
+
+
 }

@@ -4,6 +4,7 @@ import {FaLinkedin, FaGithub, FaFileDownload} from "react-icons/fa";
 import {CircleText} from "circle-text-component/src";
 import {skilsBackEnd, skilsFrontEnd} from "./skils";
 import ProjectsComponent from "../../components/projects/projects.component";
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <Header></Header>
         <section className="section-home">
           <div className="box">
-            <div style={{width: "min-content"}}>
+            <div style={{width: "min-content"}} className="box-text-me">
               <h1>Olá, sou o</h1>
               <h1>Alexandre</h1>
               <br />
@@ -61,7 +62,7 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            <div style={{display: "grid"}}>
+            <div style={{display: "grid"}} className="social-icons">
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/"
@@ -84,13 +85,13 @@ export default function Home() {
               width: "100%",
               display: "flex",
               justifyContent: "center",
+              textAlign: "center",
             }}
           >
             <h1 style={{color: "#fff", fontSize: 50}}>Minhas Skills</h1>
           </div>
           <div className="box-skills">
             <h2>Back-end</h2>
-            <br />
             <br />
             <div
               style={{
@@ -117,7 +118,6 @@ export default function Home() {
           </div>
           <div className="box-skills">
             <h2>Front-end</h2>
-            <br />
             <br />
             <div
               style={{
@@ -164,6 +164,7 @@ export default function Home() {
             <ProjectsComponent className="skils-container"></ProjectsComponent>
           </div>
         </section>
+        <Footer></Footer>
       </div>
     </>
   );
