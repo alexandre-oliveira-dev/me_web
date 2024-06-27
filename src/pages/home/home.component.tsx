@@ -44,7 +44,7 @@ export default function Home() {
               >
                 <CircleText
                   textColor="#fff"
-                  text="Dowload cv - Download cv"
+                  text="Dowload cv - Download cv -"
                 ></CircleText>
                 <div className="dowload-cv"></div>
                 <div
