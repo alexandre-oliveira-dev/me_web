@@ -8,12 +8,12 @@ export default function Footer() {
   return (
     <footer className="footer">
       <Col>
-        <Row style={{alignItems: "center", gap: 10}}>
+        <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
           <Title style={{color: "#fff"}} level={3}>
             Contatos
           </Title>
         </Row>
-        <Row style={{alignItems: "center", gap: 10}}>
+        <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
           <BsLinkedin
             onClick={() =>
               (window.location.href =
@@ -38,7 +38,7 @@ export default function Footer() {
           </p>
         </Row>
         <br />
-        <Row style={{alignItems: "center", gap: 10}}>
+        <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
           <MdEmail color="silver" size={30}></MdEmail>
           <Typography.Text
             copyable
@@ -48,6 +48,25 @@ export default function Footer() {
           >
             alexandredev.frontend@gmail.com
           </Typography.Text>
+        </Row>
+        <br />
+        <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
+          <p
+            style={{
+              color: "silver",
+            }}
+          >
+            {" "}
+            ©️copyright - Todos direitos reservados à{" "}
+            <a
+              target="_blank"
+              style={{color: "silver",textDecoration:'underline'}}
+              href="https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/"
+            >
+              Alexandre
+            </a>
+            .
+          </p>
         </Row>
       </Col>
     </footer>

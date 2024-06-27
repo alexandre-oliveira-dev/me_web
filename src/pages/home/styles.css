@@ -105,7 +105,6 @@
 
 #animationSvg {
     animation: spin 6s infinite linear;
-
     transform-origin: center;
 }
 
@@ -171,6 +170,7 @@
     .section-home {
         gap: 1rem;
         padding: 10px;
+        height: auto !important;
     }
 
     .box h1 {
@@ -194,6 +194,10 @@
         box-shadow: 10px 10px 5px 5px black;
     }
 
+    .box-image:hover {
+        scale: 1 !important;
+    }
+
     .box:last-child {
         display: grid;
         margin-top: 0px !important;
@@ -203,7 +207,8 @@
         width: 100% !important;
         text-align: center;
     }
-    .box-text-me >p{
+
+    .box-text-me>p {
         font-size: 14px !important;
     }
 
@@ -218,7 +223,8 @@
         width: 100%;
         justify-content: center;
     }
-    .box-skills{
+
+    .box-skills {
         padding: 0 10px 0 10px;
     }
 
