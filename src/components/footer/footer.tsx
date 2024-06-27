@@ -1,30 +1,18 @@
-import {Col, Row} from "antd";
+import {Col, Row, Typography} from "antd";
 import "./style.css";
 import {MdEmail} from "react-icons/md";
-import {BsLinkedin, BsWhatsapp} from "react-icons/bs";
+import {BsLinkedin} from "react-icons/bs";
+import Title from "antd/es/typography/Title";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <Col>
         <Row style={{alignItems: "center", gap: 10}}>
-          <BsWhatsapp
-            onClick={() =>
-              (window.location.href = "https://wa.me/5511994076414")
-            }
-            className="whats"
-            color="silver"
-            size={30}
-          ></BsWhatsapp>
-          <p
-            style={{
-              color: "silver",
-            }}
-          >
-            Whatsapp
-          </p>
+          <Title style={{color: "#fff"}} level={3}>
+            Contatos
+          </Title>
         </Row>
-        <br />
         <Row style={{alignItems: "center", gap: 10}}>
           <BsLinkedin
             onClick={() =>
@@ -40,26 +28,26 @@ export default function Footer() {
               color: "silver",
             }}
           >
-            Dev by{" "}
             <a
               target="_blank"
               style={{color: "silver"}}
               href="https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/"
             >
-              Alexandre web developer full-stack
+              Linkedin
             </a>
           </p>
         </Row>
         <br />
         <Row style={{alignItems: "center", gap: 10}}>
           <MdEmail color="silver" size={30}></MdEmail>
-          <p
+          <Typography.Text
+            copyable
             style={{
               color: "silver",
             }}
           >
             alexandredev.frontend@gmail.com
-          </p>
+          </Typography.Text>
         </Row>
       </Col>
     </footer>

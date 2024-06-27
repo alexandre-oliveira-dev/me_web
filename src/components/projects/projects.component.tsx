@@ -96,8 +96,8 @@ export default function ProjectsComponent({...props}: ReactProps) {
                   gap: "10px",
                 }}
               >
-                <a target="_blank" className="githubicon" href={item.github}>
-                  <FaGithub size={50} color="#fff"></FaGithub>
+                <a target="_blank"  href={item.github}>
+                  <FaGithub className="githubicon" size={50} color="#fff"></FaGithub>
                 </a>
                 <p className="github-text">Visualizar repositório</p>
               </div>

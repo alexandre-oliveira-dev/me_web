@@ -170,7 +170,7 @@
 @media(max-width:500px) {
     .section-home {
         gap: 1rem;
-        padding: 10px 10px 0px 10px;
+        padding: 10px;
     }
 
     .box h1 {
@@ -203,6 +203,9 @@
         width: 100% !important;
         text-align: center;
     }
+    .box-text-me >p{
+        font-size: 14px !important;
+    }
 
     #animationSvg {
         scale: 0.8;
@@ -215,9 +218,12 @@
         width: 100%;
         justify-content: center;
     }
+    .box-skills{
+        padding: 0 10px 0 10px;
+    }
 
     .box-skills>div>img {
-        width: 40px !important;
+        width: 25px !important;
     }
 
     .section-2 {

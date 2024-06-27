@@ -23,3 +23,9 @@
 .linkedin:hover {
     color: #0e76a8 !important;
 }
+
+@media(max-width:500px){
+    .linkedin{
+        width: 25px !important;
+    }
+}

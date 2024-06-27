@@ -82,16 +82,30 @@
 @media(max-width:500px) {
     .container-carrossel {
         width: 100%;
-
+        padding: 0 10px 0 10px;
     }
 
     .titleProject {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .subtitleProject {
-        font-size: 15px;
+        font-size: 13px;
     }
 
+    .btn-arrow-left {
+        font-size: 30px;
+    }
+
+    .btn-arrow-right {
+        font-size: 30px;
+    }
+
+    .githubicon {
+        width: 30px;
+    }
+    .github-text{
+        font-size: 13px;
+    }
 
 }

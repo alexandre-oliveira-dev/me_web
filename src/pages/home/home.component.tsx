@@ -18,7 +18,7 @@ export default function Home() {
               <h1>Alexandre</h1>
               <br />
               <p style={{color: "#fff", fontSize: 20}}>
-                Desenvolvedor web full-stack pleno, amante de tecnologia, com
+                Desenvolvedor de software pleno. <br /> Amante de tecnologia, com
                 experiência no ramo de Bilhetagem eletrônica e E-commerces.
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <h1 style={{color: "#fff", fontSize: 50}}>Minhas Skills</h1>
+            <h1 style={{color: "#fff", fontSize: 50}}>Minhas skills</h1>
           </div>
           <div className="box-skills">
             <h2>Back-end</h2>
