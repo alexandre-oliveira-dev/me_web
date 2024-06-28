@@ -66,7 +66,7 @@ export default function Header() {
             className="menuItem"
             onClick={() => {
               window.scrollTo({
-                top: 1600,
+                top: 10000,
                 behavior: "smooth",
               });
               toggleCollapsed();
@@ -98,7 +98,7 @@ export default function Header() {
         <button
           onClick={() => {
             window.scrollTo({
-              top: 1600,
+              top: 1950,
               behavior: "smooth",
             });
           }}
@@ -106,11 +106,12 @@ export default function Header() {
           Projetos
         </button>
       </div>
-      <MenuMobile open={collapsed}></MenuMobile>
-
-      <button className="menuBtnMobile" onClick={() => toggleCollapsed()}>
-        <BiMenu size={40} />
-      </button>
+      <>
+        <button className="menuBtnMobile" onClick={() => toggleCollapsed()}>
+          <BiMenu size={40} />
+        </button>
+        <MenuMobile open={collapsed}></MenuMobile>
+      </>
     </header>
   );
 }

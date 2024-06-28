@@ -5,6 +5,7 @@ import {CircleText} from "circle-text-component/src";
 import {skilsBackEnd, skilsFrontEnd} from "./skils";
 import ProjectsComponent from "../../components/projects/projects.component";
 import Footer from "../../components/footer/footer";
+import About from "../../components/about";
 
 export default function Home() {
   return (
@@ -79,6 +80,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <About></About>
         <section className="section-2">
           <div
             style={{

@@ -93,15 +93,28 @@ export default function ProjectsComponent({...props}: ReactProps) {
                   justifyContent: "center",
                   marginTop: "1rem",
                   alignItems: "center",
-                  gap: "10px",
                 }}
               >
-                <a target="_blank"  href={item.github}>
-                  <FaGithub className="githubicon" size={50} color="#fff"></FaGithub>
+                <a
+                  className="githubicon"
+                  target="_blank"
+                  href={item.github}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    textDecoration: "none",
+                  }}
+                >
+                  <FaGithub className="iconGit" size={50}></FaGithub>
+                  Visualizar repositório
                 </a>
-                <p className="github-text">Visualizar repositório</p>
               </div>
-              <Image key={item.key} src={item.src} className="iframe"></Image>{" "}
+              <Image
+                key={item.key}
+                src={item.src}
+                className="iframe"
+              ></Image>{" "}
             </div>
           );
         })}

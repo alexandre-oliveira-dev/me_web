@@ -13,42 +13,44 @@ export default function Footer() {
             Contatos
           </Title>
         </Row>
-        <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
-          <BsLinkedin
-            onClick={() =>
-              (window.location.href =
-                "https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/")
-            }
-            className="linkedin"
-            color="silver"
-            size={30}
-          ></BsLinkedin>
-          <p
-            style={{
-              color: "silver",
-            }}
-          >
+        <Col>
+          <Row style={{alignItems: "center", gap: 10}}>
             <a
+              className="linkedin"
               target="_blank"
-              style={{color: "silver"}}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                textDecoration: "none",
+                color: "silver",
+              }}
               href="https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/"
             >
+              <BsLinkedin
+                className="iconLinkedin"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/")
+                }
+                size={30}
+              ></BsLinkedin>{" "}
               Linkedin
             </a>
-          </p>
-        </Row>
-        <br />
-        <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
-          <MdEmail color="silver" size={30}></MdEmail>
-          <Typography.Text
-            copyable
-            style={{
-              color: "silver",
-            }}
-          >
-            alexandredev.frontend@gmail.com
-          </Typography.Text>
-        </Row>
+          </Row>
+          <br />
+          <Row style={{alignItems: "center", gap: 10}}>
+            <MdEmail color="silver" size={30}></MdEmail>
+            <Typography.Text
+              copyable
+              style={{
+                color: "silver",
+              }}
+            >
+              alexandredev.frontend@gmail.com
+            </Typography.Text>
+          </Row>
+        </Col>
         <br />
         <Row style={{alignItems: "center", gap: 10, justifyContent: "center"}}>
           <p
@@ -60,7 +62,7 @@ export default function Footer() {
             ©️copyright - Todos direitos reservados à{" "}
             <a
               target="_blank"
-              style={{color: "silver",textDecoration:'underline'}}
+              style={{color: "silver", textDecoration: "underline"}}
               href="https://www.linkedin.com/in/alexandre-oliveira-0b91aa172/"
             >
               Alexandre

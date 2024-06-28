@@ -72,6 +72,16 @@
     color: #fff;
 }
 
+.githubicon {
+    transition: 0.3s ease;
+    color: #fff !important;
+}
+
+.githubicon:hover {
+    color: #c8bdff !important;
+}
+
+
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -101,10 +111,11 @@
         font-size: 30px;
     }
 
-    .githubicon {
+    .iconGit {
         width: 30px;
     }
-    .github-text{
+
+    .github-text {
         font-size: 13px;
     }
 
