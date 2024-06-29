@@ -1,4 +1,4 @@
-.container-about{
+.container-about {
     width: 100%;
     height: auto;
     padding: 2rem;
@@ -7,24 +7,27 @@
     align-items: center;
     background-color: #121212;
 }
-.container-about >h1{
+
+.container-about>h1 {
     color: #fff;
     font-size: 50px;
 }
-.paragraph{
+
+.paragraph {
     color: #fff;
     font-size: 20px;
     text-align: center;
     width: 80%;
 }
 
-@media(max-width:500px){
-    .paragraph{
-        font-size: 10px;
+@media(max-width:500px) {
+    .paragraph {
+        font-size: 14px;
         width: 100%;
-        letter-spacing: 1px;
+
     }
-    .container-about >h1{
+
+    .container-about>h1 {
         font-size: 30px;
     }
 }

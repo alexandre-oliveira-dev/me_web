@@ -20,4 +20,10 @@
     .iconLinkedin {
         width: 25px !important;
     }
+
+    .box-contacts-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

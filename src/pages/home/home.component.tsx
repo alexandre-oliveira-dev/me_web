@@ -90,7 +90,7 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <h1 style={{color: "#fff", fontSize: 50}}>Minhas skills</h1>
+            <h1 style={{color: "#fff", fontSize: 50}}>Técnologias</h1>
           </div>
           <div className="box-skills">
             <h2>Back-end</h2>

@@ -13,7 +13,7 @@ export default function Footer() {
             Contatos
           </Title>
         </Row>
-        <Col>
+        <Col className="box-contacts-footer">
           <Row style={{alignItems: "center", gap: 10}}>
             <a
               className="linkedin"

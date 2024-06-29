@@ -98,7 +98,7 @@ export default function Header() {
         <button
           onClick={() => {
             window.scrollTo({
-              top: 1950,
+              top: 1500,
               behavior: "smooth",
             });
           }}
