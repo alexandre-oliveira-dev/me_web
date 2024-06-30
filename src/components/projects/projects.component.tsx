@@ -5,6 +5,7 @@ import "./style.css";
 import dash from "./imgs/dash.png";
 import barber from "./imgs/barber.png";
 import takeflix from "./imgs/takeflix.png";
+import sadi from "./imgs/sadi.png";
 import {FaGithub} from "react-icons/fa";
 import {Image} from "antd";
 
@@ -28,7 +29,7 @@ export default function ProjectsComponent({...props}: ReactProps) {
       key: 2,
       github: "https://github.com/alexandre-oliveira-dev/energyBillReader_web",
       width: "100%",
-      title: "Energi bill reader",
+      title: "Energy bill reader",
       subtitle: "Sistema de leitrura de fatura de energia, com dashboard.",
       src: dash,
       bacColor: "#001529",
@@ -42,6 +43,15 @@ export default function ProjectsComponent({...props}: ReactProps) {
         "Web app de agendamento de clientes para salões de cabelereiro.",
       src: barber,
       bacColor: "#1B1C29",
+    },
+    {
+      key: 4,
+      github: "https://github.com/alexandre-oliveira-dev/sadimorishitaCopy",
+      width: "100%",
+      title: "Projéto de estudo",
+      subtitle: "Copia de um site institucional.",
+      src: sadi,
+      bacColor: "#F3941E",
     },
   ];
 

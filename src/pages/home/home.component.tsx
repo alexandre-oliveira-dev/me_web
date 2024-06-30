@@ -15,7 +15,7 @@ export default function Home() {
         <section className="section-home">
           <div className="box">
             <div style={{width: "min-content"}} className="box-text-me">
-              <h1>Olá, sou o</h1>
+              <h1>Olá sou o</h1>
               <h1>Alexandre</h1>
               <br />
               <p style={{color: "#fff", fontSize: 20}}>
@@ -153,7 +153,7 @@ export default function Home() {
               justifyContent: "center",
             }}
           >
-            <h1 style={{color: "#fff", fontSize: 50}}>Projetos</h1>
+            <h1 style={{color: "#fff", fontSize: 50}}>Projétos</h1>
           </div>
           <div
             style={{
