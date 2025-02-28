@@ -14,7 +14,7 @@ export default function About() {
         utilizando React JS / Next Js + TypeScript, Redux, styled components,
         hooks, Context API, e AWS (S3, cognito, lambdas etc.). Além disso, tenho
         experiência na construção de APIs REST e Graphql utilizando Nest js,
-        Node.js e TypeScript. Conhecimentos básicos em automação com Docker.
+        Node.js e TypeScript e também .Net c#. Conhecimentos básicos em automação com Docker.
         Tenho conhecimento em desenvolvimento com diversos bancos de dados, como
         MySQL, PostgreSQL, MongoDB e Firebase, o que me permite lidar com
         diferentes necessidades de armazenamento e manipulação de dados.
